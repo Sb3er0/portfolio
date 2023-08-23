@@ -5818,7 +5818,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     destinationMarker = new google.maps.Marker({
                         position: destinationCoordinates,
                         map,
-                        icon: "/img/marker/markercompany.svg"
+                        icon: "img/marker/markercompany.svg"
                     });
                     userInfoWindow = new InfoWindow({
                         content: "",
@@ -5938,7 +5938,7 @@ PERFORMANCE OF THIS SOFTWARE.
                                 position: userLocation,
                                 map,
                                 icon: {
-                                    url: "/img/marker/markerpeople.svg",
+                                    url: "img/marker/markerpeople.svg",
                                     scaledSize: new google.maps.Size(40, 40)
                                 }
                             });
