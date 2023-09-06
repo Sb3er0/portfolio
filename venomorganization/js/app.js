@@ -22087,8 +22087,8 @@ PERFORMANCE OF THIS SOFTWARE.
                 applyCanvasStyles(t, e = {}) {
                     Object.assign(t.style, {
                         position: "fixed",
-                        width: 100%,
-		                height: 100%,
+                        width: "100%",
+		        height: "100%",
                         zIndex: 0,
                         top: 0,
                         left: 0,
