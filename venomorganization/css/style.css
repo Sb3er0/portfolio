@@ -318,7 +318,6 @@ textarea._form-focus {
   left: 0;
   width: 100%;
   background-color: var(--header);
-  backdrop-filter: blur(5px);
 }
 
 .header__container {
@@ -468,7 +467,7 @@ textarea._form-focus {
   --text-accent: #e8eddf;
   --text-inverse: #e8eddf;
   --logo: #009999;
-  --header: rgba(255, 255, 255, 0.6);
+  --header: rgba(255, 255, 255, 0.9);
   --white: white;
   --active: #009999;
   --butslider: #009999;
