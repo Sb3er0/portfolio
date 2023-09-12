@@ -4,13 +4,13 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Верстка «Venom Organization»</title>
+	<title>Верстка «project»</title>
 </head>
 
-<body id="genezis">
+<body>
 	<div class="rootpage">
 		<div class="rootpage__block">
-			<h1>Верстка «Venom Organization»</h1>
+			<h1>Верстка «project»</h1>
 			<div class="rootpage__info">
 				<!-- Опис проєкту -->
 			</div>
@@ -41,6 +41,8 @@
 			<p>Пошта: <a href="mailto:dobrokhod.vv@gmail.com">dobrokhod.vv@gmail.com</a></p>
 			<p>Telegram: <a href="https://t.me/vladdobrik">@vladdobrik</a></p>
 		</div>
+	</div>
+	<div class="hexagon-container">
 	</div>
 	<!-- Стилі для body -->
 	<style>
@@ -188,7 +190,6 @@
 			preloader();
 		</script>
 	</div>
-	<script src="js/app.min.js?_v=20230906143208"></script>
 </body>
 <style>
 	@charset "UTF-8";
@@ -211,14 +212,16 @@
 		min-width: 320px;
 		width: 100%;
 		color: #fff;
-		background-color: #5e5373;
+		background-color: #00002D;
 	}
+
 
 	body {
 		font-family: Montserrat;
 		font-size: 100%;
 		line-height: 1;
 		font-size: 1rem;
+		overflow-x: hidden;
 	}
 
 	a {
@@ -258,6 +261,9 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
+		position: relative;
+		z-index: 1;
+		display: inline-block;
 	}
 
 	.rootpage> :not(:last-child) {
@@ -360,6 +366,79 @@
 		box-shadow: 0px 0px 5px white;
 		backdrop-filter: blur(5px);
 	}
+
+	.hexagon-container {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		right: 0px;
+		bottom: 0px;
+		margin: 30px 10px 30px 30px;
+	}
+
+
+	.hexagon {
+		position: absolute;
+		width: 100px;
+		height: 115px;
+		background-color: transparent;
+		clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+		transform-origin: center center;
+		transition: all ease 5s;
+	}
+
+	.hexagon:hover {
+		background-color: #00FFFF;
+		cursor: pointer;
+		transition: all ease 0.01s;
+	}
 </style>
+<script>
+	function createHexagon(x, y) {
+		const hexagon = document.createElement('div');
+		hexagon.className = 'hexagon';
+		hexagon.style.left = x + 'px';
+		hexagon.style.top = y + 'px';
+		document.querySelector('.hexagon-container').appendChild(hexagon);
+	}
+
+	function createHexagonalGrid() {
+		const hexagonWidth = 100;
+		const hexagonHeight = 115;
+		const spacing = 10;
+
+		const container = document.querySelector('.hexagon-container');
+		const containerWidth = container.offsetWidth;
+		const verticalSpacing = hexagonHeight * 0.75 + spacing;
+		const horizontalSpacing = hexagonWidth + spacing;
+
+		const cols = Math.floor(containerWidth / horizontalSpacing);
+
+		const rows = Math.floor(container.offsetHeight / verticalSpacing); // Убедитесь, что вычисляем только полные ряды
+
+		while (container.firstChild) {
+			container.removeChild(container.firstChild);
+		}
+
+		for (let row = 0; row < rows; row++) {
+			const xOffset = row % 2 === 1 ? horizontalSpacing / 2 : 0;
+			for (let col = 0; col < cols; col++) {
+				const x = col * horizontalSpacing + xOffset;
+				const y = row * verticalSpacing;
+
+				if (x + hexagonWidth <= containerWidth) { // Проверка на горизонтальное пространство
+					createHexagon(x, y);
+				}
+			}
+		}
+	}
+
+	function updateHexagonalGrid() {
+		createHexagonalGrid();
+	}
+
+	window.addEventListener('resize', updateHexagonalGrid);
+	createHexagonalGrid();
+</script>
 
 </html>
