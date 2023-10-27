@@ -188,6 +188,10 @@ h6 {
   display: none;
 }
 
+.spollers__title::-webkit-details-marker {
+  display: none;
+}
+
 ._spoller-init .spollers__title {
   cursor: pointer;
   /*
