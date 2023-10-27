@@ -184,6 +184,10 @@ h6 {
   -webkit-list-style: none;
 }
 
+.spollers__title::marker {
+  display: none;
+}
+
 ._spoller-init .spollers__title {
   cursor: pointer;
   /*
