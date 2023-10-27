@@ -91,6 +91,7 @@ a {
 
 ul li {
   list-style: none;
+  -webkit-list-style: none;
 }
 
 img {
@@ -180,6 +181,7 @@ h6 {
   padding: 0.625rem 0.9375rem;
   position: relative;
   list-style: none;
+  -webkit-list-style: none;
 }
 
 ._spoller-init .spollers__title {
