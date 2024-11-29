@@ -1472,7 +1472,7 @@ h6 {
     padding-bottom: clamp(1.5625rem ,-3.7638888889rem + 11.1111111111vw ,3.125rem)
   }
 }
-@media (max-height:579.98px) {
+@media (max-height:509.98px) {
   .page__home {
     height: auto!important
   }
