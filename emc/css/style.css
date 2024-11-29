@@ -1303,6 +1303,11 @@ h6 {
     row-gap: 40px
   }
 }
+@media (max-width:47.99875em)and (max-width:47.99875em) {
+  .menu-open .menu__body .menu__list {
+    flex-wrap: nowrap
+  }
+}
 @media (max-width:47.99875em)and (any-hover:none) {
   .icon-menu {
     cursor: default
@@ -1467,7 +1472,7 @@ h6 {
     padding-bottom: clamp(1.5625rem ,-3.7638888889rem + 11.1111111111vw ,3.125rem)
   }
 }
-@media (max-height:767.98px) {
+@media (max-height:579.98px) {
   .page__home {
     height: auto!important
   }
