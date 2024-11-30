@@ -932,10 +932,12 @@ h6 {
   text-align: center
 }
 .scroll-to-top {
-  position: fixed;
+  position: sticky;
   display: flex;
   justify-content: center;
   align-items: center;
+  left: 100%;
+  bottom: 10px;
   background-color: var(--blue);
   transition: all ease .3s;
   border: 2px solid var(--white);
@@ -1040,9 +1042,6 @@ h6 {
   .scroll-to-top {
     height: 3.75rem
   }
-  .scroll-to-top {
-    right: 1.5625rem
-  }
 }
 @media (min-width:62em) {
   .home__text {
@@ -1099,9 +1098,6 @@ h6 {
   }
   .home__buttonlink {
     height: 3.75rem
-  }
-  .scroll-to-top {
-    right: .625rem
   }
 }
 @media (max-width:991.98px) {
@@ -1508,9 +1504,6 @@ h6 {
   .home__buttonlink {
     height: clamp(3.75rem ,-6.6994382022rem + 16.8539325843vw ,5.625rem)
   }
-  .scroll-to-top {
-    right: clamp(.625rem ,-4.5997191011rem + 8.4269662921vw ,1.5625rem)
-  }
 }
 @media (min-width:47.9375em)and (max-width:62em) {
   .page__contacts {
@@ -1529,7 +1522,10 @@ h6 {
     padding-bottom: clamp(1.5625rem ,-3.7638888889rem + 11.1111111111vw ,3.125rem)
   }
 }
-@media (max-height:509.98px) {
+@media (max-height:767.98px) {
+  .header__info {
+    font-size: 16px
+  }
   .page__home {
     height: auto!important
   }
