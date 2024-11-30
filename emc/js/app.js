@@ -114,7 +114,7 @@
     document.addEventListener("DOMContentLoaded", (() => {
         const scrollToTopButton = document.querySelector(".scroll-to-top");
         const handleScroll = () => {
-            if (window.scrollY > 300) scrollToTopButton.classList.add("visible"); else scrollToTopButton.classList.remove("visible");
+            if (window.scrollY > 150) scrollToTopButton.classList.add("visible"); else scrollToTopButton.classList.remove("visible");
         };
         const scrollToTop = () => {
             window.scrollTo({
