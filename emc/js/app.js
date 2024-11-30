@@ -125,16 +125,6 @@
         scrollToTopButton.addEventListener("click", scrollToTop);
         window.addEventListener("scroll", handleScroll);
     }));
-    document.addEventListener("DOMContentLoaded", (() => {
-        const scrollToTopButton = document.querySelector(".scroll-to-top");
-        const footer = document.querySelector("footer");
-        const updateButtonBottom = () => {
-            const footerHeight = footer.offsetHeight;
-            scrollToTopButton.style.bottom = `${footerHeight}px`;
-        };
-        updateButtonBottom();
-        window.addEventListener("resize", updateButtonBottom);
-    }));
     window["FLS"] = true;
     menuInit();
 })();
