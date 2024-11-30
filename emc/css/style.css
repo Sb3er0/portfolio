@@ -931,6 +931,36 @@ h6 {
   color: var(--blue);
   text-align: center
 }
+.scroll-to-top {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--blue);
+  transition: all ease .3s;
+  border: 2px solid var(--white);
+  opacity: 0;
+  visibility: hidden
+}
+.scroll-to-top svg {
+  width: 60%;
+  height: 60%;
+  fill: var(--white);
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+  transition: all ease .3s
+}
+.scroll-to-top:hover {
+  background-color: var(--white-blur);
+  border: 2px solid var(--blue)
+}
+.scroll-to-top:hover svg {
+  fill: var(--blue)
+}
+.scroll-to-top.visible {
+  opacity: 1;
+  visibility: visible
+}
 @media (min-width:37.5em) {
   .header__info {
     font-size: 1.875rem
@@ -1004,6 +1034,15 @@ h6 {
   .reviews__text {
     font-size: 1.625rem
   }
+  .scroll-to-top {
+    width: 3.75rem
+  }
+  .scroll-to-top {
+    height: 3.75rem
+  }
+  .scroll-to-top {
+    right: 1.5625rem
+  }
 }
 @media (min-width:62em) {
   .home__text {
@@ -1060,6 +1099,9 @@ h6 {
   }
   .home__buttonlink {
     height: 3.75rem
+  }
+  .scroll-to-top {
+    right: .625rem
   }
 }
 @media (max-width:991.98px) {
@@ -1190,6 +1232,12 @@ h6 {
   }
   .reviews__text {
     font-size: 1rem
+  }
+  .scroll-to-top {
+    width: 2.8125rem
+  }
+  .scroll-to-top {
+    height: 2.8125rem
   }
 }
 @media (max-width:47.99875em) {
@@ -1384,6 +1432,12 @@ h6 {
   .reviews__text {
     font-size: clamp(1rem ,.7647058824rem + 1.1764705882vw ,1.625rem)
   }
+  .scroll-to-top {
+    width: clamp(2.8125rem ,2.4595588235rem + 1.7647058824vw ,3.75rem)
+  }
+  .scroll-to-top {
+    height: clamp(2.8125rem ,2.4595588235rem + 1.7647058824vw ,3.75rem)
+  }
 }
 @media (min-width:20em)and (max-width:62em) {
   .home__text {
@@ -1453,6 +1507,9 @@ h6 {
   }
   .home__buttonlink {
     height: clamp(3.75rem ,-6.6994382022rem + 16.8539325843vw ,5.625rem)
+  }
+  .scroll-to-top {
+    right: clamp(.625rem ,-4.5997191011rem + 8.4269662921vw ,1.5625rem)
   }
 }
 @media (min-width:47.9375em)and (max-width:62em) {
