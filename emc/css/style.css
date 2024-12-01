@@ -595,7 +595,9 @@ h6 {
   border-radius: 100%;
   display: flex;
   justify-content: center;
-  align-items: center
+  align-items: center;
+  width: 50px;
+  height: 50px
 }
 .home__linksvg svg {
   width: 60%;
@@ -979,12 +981,6 @@ h6 {
   .page__home {
     padding-top: 3.125rem
   }
-  .home__linksvg {
-    width: 3.125rem
-  }
-  .home__linksvg {
-    height: 3.125rem
-  }
   .home__socmedialist {
     gap: .9375rem
   }
@@ -1167,6 +1163,14 @@ h6 {
     grid-template-columns: repeat(2,auto)
   }
 }
+@media (max-width:629.98px)and (max-width:20em) {
+  .home__linksvg {
+    width: 1.875rem
+  }
+  .home__linksvg {
+    height: 1.875rem
+  }
+}
 @media (max-width:20em) {
   .header__info {
     font-size: .9375rem
@@ -1182,12 +1186,6 @@ h6 {
   }
   .home__logo {
     max-width: 5rem
-  }
-  .home__linksvg {
-    width: 1.875rem
-  }
-  .home__linksvg {
-    height: 1.875rem
   }
   .home__socmedialist {
     gap: .625rem
@@ -1388,12 +1386,6 @@ h6 {
   .page__home {
     padding-top: clamp(1.5625rem ,-.0504032258rem + 8.064516129vw ,3.125rem)
   }
-  .home__linksvg {
-    width: clamp(1.875rem ,.5846774194rem + 6.4516129032vw ,3.125rem)
-  }
-  .home__linksvg {
-    height: clamp(1.875rem ,.5846774194rem + 6.4516129032vw ,3.125rem)
-  }
   .home__linktext {
     font-size: clamp(.875rem ,.6169354839rem + 1.2903225806vw ,1.125rem)
   }
@@ -1483,6 +1475,22 @@ h6 {
     padding-bottom: clamp(.625rem ,.1775727069rem + 2.2371364653vw ,1.25rem);
     padding-left: clamp(.9375rem ,.4900727069rem + 2.2371364653vw ,1.5625rem);
     padding-right: clamp(.9375rem ,.4900727069rem + 2.2371364653vw ,1.5625rem)
+  }
+}
+@media (max-width:629.98px)and (min-width:39.375em) {
+  .home__linksvg {
+    width: 3.125rem
+  }
+  .home__linksvg {
+    height: 3.125rem
+  }
+}
+@media (max-width:629.98px)and (min-width:20em)and (max-width:39.375em) {
+  .home__linksvg {
+    width: clamp(1.875rem ,.5846774194rem + 6.4516129032vw ,3.125rem)
+  }
+  .home__linksvg {
+    height: clamp(1.875rem ,.5846774194rem + 6.4516129032vw ,3.125rem)
   }
 }
 @media (min-width:62em)and (max-width:73.125em) {
