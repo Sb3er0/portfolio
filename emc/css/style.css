@@ -1586,7 +1586,7 @@ h6 {
     font-size: 16px
   }
 }
-@media (max-height:589.98px) {
+@media (max-height:509.98px) {
   .page__home {
     height: auto!important
   }
