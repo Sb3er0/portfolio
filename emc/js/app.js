@@ -53,6 +53,10 @@
         }
     }), 0);
     document.addEventListener("DOMContentLoaded", (() => {
+        console.log(`Ширина окна: ${window.innerWidth}px`);
+        console.log(`Высота окна: ${window.innerHeight}px`);
+    }));
+    document.addEventListener("DOMContentLoaded", (() => {
         document.querySelector(".home__buttonlink").addEventListener("click", (() => {
             const headerHeight = document.querySelector(".header").offsetHeight;
             const secondBlock = document.querySelector("#services");
@@ -113,8 +117,20 @@
     }));
     document.addEventListener("DOMContentLoaded", (() => {
         const scrollToTopButton = document.querySelector(".scroll-to-top");
+        const main = document.querySelector("main");
+        const footer = document.querySelector("footer");
         const handleScroll = () => {
+            main.getBoundingClientRect();
+            const footerRect = footer.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
             if (window.scrollY > 150) scrollToTopButton.classList.add("visible"); else scrollToTopButton.classList.remove("visible");
+            if (footerRect.top < windowHeight) {
+                scrollToTopButton.style.position = "absolute";
+                scrollToTopButton.style.bottom = "10px";
+            } else {
+                scrollToTopButton.style.position = "fixed";
+                scrollToTopButton.style.bottom = "10px";
+            }
         };
         const scrollToTop = () => {
             window.scrollTo({
