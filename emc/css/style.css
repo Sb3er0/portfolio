@@ -1170,6 +1170,9 @@ h6 {
   .home__linksvg {
     height: 1.875rem
   }
+  .home__linktext {
+    font-size: .875rem
+  }
 }
 @media (max-width:20em) {
   .header__info {
@@ -1386,9 +1389,6 @@ h6 {
   .page__home {
     padding-top: clamp(1.5625rem ,-.0504032258rem + 8.064516129vw ,3.125rem)
   }
-  .home__linktext {
-    font-size: clamp(.875rem ,.6169354839rem + 1.2903225806vw ,1.125rem)
-  }
   .home__socmedialist {
     gap: clamp(.625rem ,.3024193548rem + 1.6129032258vw ,.9375rem)
   }
@@ -1491,6 +1491,9 @@ h6 {
   }
   .home__linksvg {
     height: clamp(1.875rem ,.5846774194rem + 6.4516129032vw ,3.125rem)
+  }
+  .home__linktext {
+    font-size: clamp(.875rem ,.6169354839rem + 1.2903225806vw ,1.125rem)
   }
 }
 @media (min-width:62em)and (max-width:73.125em) {
