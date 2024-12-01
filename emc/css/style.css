@@ -1558,6 +1558,7 @@ h6 {
 }
 @media (max-height:699.98px) {
   .home__list {
-    flex-direction: row
+    flex-direction: row;
+    flex-wrap: wrap
   }
 }
